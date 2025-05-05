@@ -10,6 +10,7 @@ fun Application.initDB() {
     val user = environment.config.property("database.user").getString()
     val driver = environment.config.property("database.driver").getString()
     val password = System.getenv("ktor_blog_database_password")
+    println("password $password")
 
     val db = Database.connect(
         url = url,

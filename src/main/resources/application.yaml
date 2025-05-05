@@ -12,6 +12,6 @@ jwt:
   claimField: "id"
 
 database:
-  url: "jdbc:mysql://localhost:3306/ktor_blog_api_database"
+  url: "jdbc:mysql://localhost:3306/ktor_blog_database"
   user: "ktor_blog_api_database_user2"
   driver: "com.mysql.cj.jdbc.Driver"
