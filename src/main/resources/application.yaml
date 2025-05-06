@@ -5,9 +5,9 @@ ktor:
     deployment:
         port: 8080
 jwt:
-  domain: "https://kmp_ktor_backend.railway.internal/"
+  domain: "https://kmpktorbackend-production.up.railway.app/"
   audience: "client"
-  realm: "KMP_KTOR_BACKEND"
+  realm: "daring-radiance"
   claimField: "id"
   jwt_secret: "z7e5KfV9pJ2q$WcM3!mT"
 
