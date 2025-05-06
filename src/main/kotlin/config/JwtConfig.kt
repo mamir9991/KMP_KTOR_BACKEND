@@ -11,8 +11,8 @@ fun Application.generateToken(user: User): String? {
 
     return try {
 
-        val jwtSecret = System.getenv("jwt_secret")
-        val jwtIssuer = environment.config.property("jwt.issuer").getString()
+        val jwtSecret = environment.config.property("jwt.jwt_secret").getString()
+        val jwtIssuer = environment.config.property("jwt.domain").getString()
         val jwtAudience = environment.config.property("jwt.audience").getString()
         val claimField = environment.config.property("jwt.claimField").getString()
         val expTimeInMins = 24 * 60
@@ -38,8 +38,8 @@ fun Application.generateToken(user: User): String? {
 }
 
 fun Application.jwtVerifier(): JWTVerifier {
-    val jwtSecret = System.getenv("jwt_secret")
-    val jwtIssuer = environment.config.property("jwt.issuer").getString()
+    val jwtSecret = environment.config.property("jwt.jwt_secret").getString()
+    val jwtIssuer = environment.config.property("jwt.domain").getString()
     val jwtAudience = environment.config.property("jwt.audience").getString()
 
     return JWT.require(Algorithm.HMAC256(jwtSecret))

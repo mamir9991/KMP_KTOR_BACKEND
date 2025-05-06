@@ -5,11 +5,11 @@ ktor:
     deployment:
         port: 8080
 jwt:
-  domain: "http://0.0.0.0:8080/"
+  domain: "https://kmp_ktor_backend.railway.internal/"
   audience: "client"
-  issuer: "http://0.0.0.0:8080/"
-  realm: "ktor-blog-api"
+  realm: "KMP_KTOR_BACKEND"
   claimField: "id"
+  jwt_secret: "z7e5KfV9pJ2q$WcM3!mT"
 
 database:
   url: "jdbc:mysql://trolley.proxy.rlwy.net:20249/railway?useSSL=true&serverTimezone=UTC"
