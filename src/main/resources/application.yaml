@@ -12,6 +12,10 @@ jwt:
   claimField: "id"
 
 database:
-  url: "jdbc:mysql://localhost:3306/ktor_blog_database"
-  user: "ktor_blog_api_database_user2"
+  url: "jdbc:mysql://trolley.proxy.rlwy.net:20249/railway?useSSL=true&serverTimezone=UTC"
+  user: "root"
   driver: "com.mysql.cj.jdbc.Driver"
+  host: "mysql.railway.internal"
+  port: "3306"
+  name: "railway"
+  password: "PdrEhCLoDppXgOjDlKCJywZJqjfubaqC"
